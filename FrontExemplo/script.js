@@ -13,7 +13,6 @@ const id_cliente = localStorage.getItem("id");
 let prods = [];
 window.addEventListener("load", async () => {
   if (!id_cliente) window.location.replace("./login.html");
-
   const respostalistacarros = await fetch(`${api}/listcarros`);
   const listcarros = await respostalistacarros.json();
   listcarros.forEach((element)=>{
@@ -35,6 +34,10 @@ window.addEventListener("load", async () => {
       `;
   });
   renderizar(prods);
+  setTimeout(()=>{
+    localStorage.clear();
+    window.location.reload();
+  },900000);
 });
 
 function renderizar(prods) {

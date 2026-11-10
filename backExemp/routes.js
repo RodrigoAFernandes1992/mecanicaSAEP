@@ -92,7 +92,7 @@ routes.get("/manutencao", async (req, res) => {
       `;
   } else {
     rows = await sql`
-       select * from agendamentos order by id_manutencao;
+       select * from manutencao order by id_manutencao;
       `;
   }
   return res.status(200).json(rows);
