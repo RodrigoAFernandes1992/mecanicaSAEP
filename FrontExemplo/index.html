@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input{
+        width: 800px;
+        height: 30px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      table,
+      tr,
+      td,
+      th {
+        border-collapse: collapse;
+        border: 2px solid green;
+        padding: 4px;
+      }
+      .card{border: 1px solid saddlebrown;
+      padding: 10px;
+      }
+      #vazia{
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" onclick="sair()">Sair</button>
+    <dialog id="formulario">
+      <form>
+        <input
+          type="text"
+          id="descricao_problema"
+          placeholder="Descrição do problema"
+          required
+        />
+        <input type="text" id="tipo_servico" placeholder="tipo_servico" />
+        <input type="number" id="valor" placeholder="valor" />
+        <select name="" id="id_fabric" required>
+          <option value="">Selecione um carro</option>
+        </select>
+        <input type="date" id="previsao_saida" required />
+        <button>Cadastrar Produto</button>
+      </form>
+      <button type="button" command="close" commandfor="formulario">
+        Fechar Modal
+      </button>
+    </dialog>
+    <button type="button" command="show-modal" commandfor="formulario">
+      Cadastrar Manutenção
+    </button>
+    <input type="text" id="manutencoes" placeholder="insira o carro para buscar">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Data de entrada</th>
+          <th>Data da Saida</th>
+          <th>Previsão de Entrega</th>
+          <th>Status</th>
+          <th>Descrição do Problema</th>
+          <th>Tipo de Serviço</th>
+          <th>Valor</th>
+          <th>ID_veiculo</th>
+          <th>Gerenciar</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <input type="text" id="usuarios" placeholder="insira o carro para buscar">
+    <div id="vazia"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

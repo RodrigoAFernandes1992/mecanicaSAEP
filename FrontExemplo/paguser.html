@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <dialog id="cadCarro">
+      <button type="button" command="close" commandfor="cadCarro">X</button>
+      <form>
+        <input type="text" placeholder="Marca" id="marca" required />
+        <input type="text" placeholder="Modelo" id="modelo" required />
+        <input type="text" placeholder="Cor" id="cor" required />
+        <input type="text" placeholder="placa" id="placa" required />
+        <input type="number" placeholder="Ano" id="ano" required />
+        <button>ADD Carro</button>
+      </form>
+    </dialog>
+    <button type="button" command="show-modal" commandfor="cadCarro">
+      Cadastrar Veículos
+    </button>
+    <button type="button" onclick="sair()">Sair</button>
+    <script src="./usercadastroveic.js"></script>
+  </body>
+</html>
